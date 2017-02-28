@@ -10,4 +10,4 @@ The orignal latex template has too much blank place which wasting too much space
 这里给出了一个我自己的简历，word和latex版本。我开始的时候完成的是Word版本的，其实latex做起来也很好看。然后另外给出了Latex版本的，使用方法详细见[这里](https://github.com/billryan/resume/tree/zh_CN)。
 
 
-[简历](/latex/resume-zh_CN.pdf)
+[我的简历](/latex/resume-zh_CN.pdf)
