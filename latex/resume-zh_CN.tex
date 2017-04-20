@@ -17,10 +17,10 @@
 
 \Large{
   \begin{tabu}{ c l r }
-   \multirow{5}{1in}{\includegraphics[width=0.88in]{DSC_0804}} & \scshape{丁文东} & \pbar{Python}{0.75} \\
-    & \email{x007dwd@gmail.com} & \pbar{C/C++}{0.75} \\
-    & \phone{(+86) 153-013-08336} & \pbar{Linux}{0.7} \\
-    & \linkedin[boin]{https://www.linkedin.com/in/bobin-ding-55496b134/} & \pbar{ROS}{0.5} \\
+   \multirow{5}{1in}{\includegraphics[width=0.88in]{DSC_0804}} & \scshape{丁文东} & \pbar{C/C++}{0.8} \\
+    & \email{x007dwd@gmail.com} & \pbar{Python}{0.7} \\
+    & \phone{(+86) 153-013-08336} & \pbar{Linux}{0.6} \\
+    & \linkedin[boin]{https://www.linkedin.com/in/bobin-ding-55496b134/} & \pbar{ROS}{0.7} \\
     & \github[github.com/x007dwd]{https://github.com/x007dwd} & \pbar{QT}{0.5}
   \end{tabu}
 }
@@ -33,7 +33,7 @@
 %   \linkedin[丁文东]{https://www.linkedin.com/in/文东-丁-55496b134}}
   %\linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{中国科学院大学}, 北京}{\textit{在读博士} \quad 控制理论与控制工程 \quad 2013 -- 至今}
+\datedsubsection{\textbf{中国科学院自动化研究所}, 北京}{\textit{在读博士} \quad 控制理论与控制工程 \quad 2013 -- 至今}
 %, 预计 2018 年 6 月毕业
 \datedsubsection{\textbf{武汉理工大学}, 武汉, 湖北}{\textit{工学学士}\qquad 电子科学与技术 \quad 2009 -- 2013}
 
@@ -42,44 +42,52 @@
 
 \datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 至今}
 \begin{itemize}\small
-  \item 作为主要成员搭建了室内移动机器人的相机、IMU系统，完成系统标定。优化、修改DSO系统为VIO系统，并移植到TK1（NVIDIA 嵌入式GPU）系统。使用深度网络实现图像的语义分析，构建语义地图辅助视觉定位。
+  \item 使用DUO 3D双目相机（具备IMU）作为室内移动机器人的视觉系统。在DSO系统的基础上加入IMU辅助，提高系统的鲁棒性，并移植到TK1（NVIDIA 嵌入式GPU）系统。
+  \item 使用深度网络实现图像的语义分割，辅助并提高视觉定位的精度。
   \item 在室内安装二维码（AprilTag），搭建基于二维码的视觉室内定位基准系统。
   \item {\color{red}丁文东}，徐德，刘希龙，张大朋，移动机器人视觉定位综述, 自动化学报。（EI Index, 在审）
 \end{itemize}
 
 \datedsubsection{\textbf{无人机相对定位设计验证平台}}{程序员：软件部分 \quad 2015.11 -- 2016.10}
 \begin{itemize}\small
-  \item 作为主要成员搭建四旋翼无人机平台硬件，编写了机载云台的驱动和位姿估计代码，地面站状态显示软件。C++/ROS开发，包含定位节点、跟踪节点、云台控制节点、地面站节点。实现变焦系统下对合作目标的跟踪，无人机位姿估计。
+  \item 使用DJI M100四旋翼作为飞行平台，2轴的云台作为视觉系统，TK1 GPU系统作为机载视觉处理系统。软件上通过标志的识别以及特征点提取，测量出无人机的位姿。另外通过PID控制器调整云台，保持标志处在视野的中央。
+  \item 使用ROS部署多机（地面站和机载系统）的通信，在机载系统上完成无人机的控制和姿态估计任务，在地面站上进行状态显示和交互。
   \item 通过解决离焦条件下对图像控制点的精确提取，实现对离焦图像鲁棒的相机标定方法。
-  \item {\color{red}W. Ding}, D. Xu, X. Liu, D. Zhang, “A Robust Detection Method of Control Points for Calibration and Measurement with Defocused Images”, IEEE Transactions on Instrumentation and Measurement. (SCI, EI Index, Accepted)
+  \item {\color{red}W. Ding}, D. Xu, X. Liu, D. Zhang, "A Robust Detection Method of Control Points for Calibration and Measurement with Defocused Images," IEEE Transactions on Instrumentation and Measurement. (SCI, EI Index, Accepted)
 \end{itemize}
 
 \datedsubsection{\textbf{反射镜表面颗粒物在线监测}}{程序员：软件部分 \quad 2014.07 -- 2015.11}
 \begin{itemize}\small
-\item 作为主要成员搭建反射镜暗场成像系统，编写了系统的图像采集、镜头控制、颗粒提取。C++/MFC开发。
-\item {\color{red}W. Ding}, D. Xu, Z. Zhang and D. Zhang, “Particle detection on low contrast image of large aperture optics,” 2016 Chinese Control and Decision Conference , Yinchuan, 2016, pp. 5209-5214.（EI index）
-\item {\color{red}W. Ding},, Z. Zhang, D. Zhang, D. Xu, H. Lv, X. Miao, G. Zhou, H. Liu, “An Effective On-line Surface Particles Inspection Instrument for Large Aperture Optical Element” International Journal of Automation and Computing. (EI index, Accepted).
+\item 应用散射原理形成暗场成像系统，通过高分辨率相机（6600$\times$4400）获取反射镜（大口径光学系统）表面的颗粒物图像。
+\item 颗粒物图像中的背景复杂、信噪比低，为了分割出正确的颗粒物区域，首先提取可能的候选区域，然后通过参考图像对比筛选出正确的颗粒物区域。
+\item {\color{red}W. Ding}, D. Xu, Z. Zhang and D. Zhang, "Particle detection on low contrast image of large aperture optics," 2016 Chinese Control and Decision Conference , Yinchuan, 2016, pp. 5209-5214.（EI index）
+\item {\color{red}W. Ding},, Z. Zhang, D. Zhang, D. Xu, H. Lv, X. Miao, G. Zhou, H. Liu, "An Effective On-line Surface Particles Inspection Instrument for Large Aperture Optical Element," International Journal of Automation and Computing. (EI index, Accepted).
 \item {\color{red}丁文东}，张正涛，张大鹏，陶显，史亚莉，吕海兵，苗心向，周国瑞，一种高分辨率显微视觉成像装置与控制方法，申请公布号: CN104410775A ，申请公布日:2015.03.11
 \item 张大朋，张正涛，{\color{red}丁文东}，徐德，光学元件表面颗粒物在线监测装置及其在线监测的方法，申请公布号: CN105928949A，申请公布日:2015.09.07
 \end{itemize}
 
 \datedsubsection{\textbf{机液混合机械臂控制系统}}{毕业设计（驱动、软件） \quad 2013.03 -- 2013.06}
 \begin{itemize}\small
-  \item 基于ARM的机液混合机械臂控制系统的设计，设计首先针对液压伺服系统设计控制卡，然后研究了机械臂正逆运动学模型及路径规划并进行MATLAB仿真，针对液压系统特性提出模型参考自适应PID，用matlab进行了算法验证，并对系统进行了典型信号的测试。其中液压伺服驱动卡使用stm32作为控制核心，移植uc/os系统完成实验验证。
+  \item 基于ARM的机液混合机械臂控制系统的设计，对液压伺服系统设计控制卡（PCB），液压伺服驱动卡使用stm32作为控制核心，移植uc/os系统完成实验验证。
+  \item 研究了机械臂正逆运动学模型及路径规划并进行MATLAB仿真，针对液压系统特性提出模型参考自适应PID，用matlab进行了算法验证，并对系统进行了典型信号的测试。
 \end{itemize}
 \datedsubsection{\textbf{湖北省大学生电子设计竞赛}}{队长（单片机代码） \quad 2012.03 - 2012.08}
 \begin{itemize}\small
-  \item 首先使用DDS芯片完成信号源，产生幅值0-10V带宽0-100KHz的正弦信号。信号通过题目要求的模拟模块（频率为4.5KHz的低通滤波器），然后信号经过频率补偿电路，实现电压总增益为1，带宽扩展到100kHz，带内波动小于±10\%、输出噪声电压均方根值小于10mV的要求，完成了基本部分和发挥部分所有要求。该频率补偿电路拥有很好的频率补偿功能，自制简易信号源可以实现输出信号频率幅度的连续可调。
+  \item 使用DDS芯片完成信号源，产生幅值0-10V带宽0-100KHz的正弦信号。
+  \item 信号通过题目要求的模拟模块（频率为4.5KHz的低通滤波器），然后信号经过频率补偿电路，实现电压总增益为1，带宽扩展到100kHz，带内波动小于±10\%、输出噪声电压均方根值小于10mV。
 \end{itemize}
 \datedsubsection{\textbf{智能电网用户端电能监测系统}}{负责人（ARM及UI代码） \quad 2011.11 -- 2012.04}
 \begin{itemize}\small
-  \item 该系统为嵌入式的用户端电能质量监控系统，具有电能质量检测、能源功耗计量、电力载波通信、数据自动抄收等功能。电能质量检测可对用户的现场用电做采样处理，显示质量好坏，做指数评估。能源功耗测量可对用电电量、功率、功率因数等重要信息做详尽展示。电力载波通信可将数据使用电力电缆传输，集中汇总。该项目主要包括测量终端（完成电能计量，电能质量参数分析，使用STM32作为控制核心）、集中器（完成数据集中，载波通信等）、上位机人机交互（使用QT编程完成）等子系统组成。
+  \item 该系统为嵌入式的用户端电能质量监控系统，具有电能质量检测、能源功耗计量、电力载波通信、数据自动抄收等功能。
+  \item 电能质量检测模块可对用户的现场用电做采样处理，显示质量好坏，做指数评估。能源功耗测量模块可对用电电量、功率、功率因数等重要信息做详尽展示。电力载波通信可将数据使用电力电缆传输，集中汇总。
+  \item 下位机使用STM32作为控制核心，完成电能计量，电能质量参数分析。上位机使用QT完成显示及人机交互。
   \item 梁小宇,张纯,{\color{red}丁文东},徐帆. 基于电力载波通信的电能质量监测系统设计[J]. 武汉理工大学学报(信息与管理工程版),2013,(05):659-663.
 \end{itemize}
 
 \datedsubsection{\textbf{基于等效采样的数字存储示波器}}{负责人（FPGA、单片机软件） \quad 2011.12 -- 2012.03}
 \begin{itemize}\small
-  \item 该项目使用低成本的低端低速AD实现较高频率的采集和显示，主要包括信号程控放大（使用VGA）、采样保持、AD转换、FPGA采样保持（使用顺序等效采样）、单片机（MSP430）控制显示（使用320x240触摸屏显示控制）部分。实时采样速率≤1MSa/s，等效采样速率≥200MSa/s，软件触发、触发电平可调
+  \item 该项目使用低成本的低端低速AD实现较高频率的采集和显示，通过信号的程控放大、采样保持、AD转换、FPGA采样保持完成信号的顺序等效采样。
+  \item 使用MSP430单片机完成菜单控制和波形等显示。实时采样速率≤1MSa/s，等效采样速率≥200MSa/s，软件触发、触发电平可调。
 \end{itemize}
 
 
@@ -117,11 +125,11 @@
 % increase linespacing [parsep=0.5ex]
 \begin{itemize}\small
 \item 阅读了无人机位姿估计、视觉（惯性）里程计/SLAM、深度网络位姿估计、SLAM语义分析的文献，英语四六级优秀，有较强的英语听说读写能力，熟练使用LaTeX。
-\item 撰写CSDN系列博客，\href{http://blog.csdn.net/wendox/article/category/6026381}{玩转四旋翼无人机}，\href{http://blog.csdn.net/wendox/article/category/6390089}{ROS使用教程}，\href{http://blog.csdn.net/wendox/article/category/6555599}{SLAM学习}。
-\item 熟练使用C/C++, Python, Matlab，熟练使用QT，MFC编写人机交互软件。
+\item 撰写CSDN系列博客，\href{http://blog.csdn.net/wendox/article/category/6026381}{玩转四旋翼无人机(35篇)}，\href{http://blog.csdn.net/wendox/article/category/6390089}{ROS使用教程(14篇)}，\href{http://blog.csdn.net/wendox/article/category/6555599}{SLAM学习(13篇)}。
+\item 熟练使用C/C++, Python, Matlab，熟练使用QT，MFC。
 \item 熟练Linux下常用指令及C++，Python，ROS开发环境。
-\item 理解常用的机器/深度学习，视觉（惯性）SLAM/VO算法（SVO，DSO，ORB SLAM，OKVIS）。
-\item 熟悉常用的SLAM工具，熟练使用OpenCV，熟悉Sophus、Eigen、G2O、Kalibr。
+\item 理解常用的机器/深度学习，视觉（惯性）SLAM/VO算法（SVO，DSO，ORB SLAM）。
+\item 熟悉常用的SLAM工具 (Sophus、Eigen、G2O)，熟练使用OpenCV。
 \end{itemize}
 
 \section{\faHeartO\ 获奖情况}
