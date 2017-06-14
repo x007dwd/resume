@@ -41,27 +41,32 @@
 \datedsubsection{\textbf{北京邮电大学}, 北京}{\textit{工学学士}\qquad 机械工程及自动化 \quad 2012 -- 2016}
 
 \section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{基于卡尔曼滤波器的跟踪器}}{\quad 2017.01 - 2017.05}
+\datedsubsection{\textbf{基于卡尔曼滤波器的跟踪器}}{Python/C++\quad 2017.01 - 2017.05}
 \begin{itemize}\small
-  \item 将RGB图像转换至HSV空间，在HSV的三个通道分别设置阈值，检测小球的位置。
-  \item 使用Kalman滤波器对跟踪的位置、误差进行预测和跟新。
+  \item 将RGB图像转换至HSV空间，在HSV的三个通道分别设置阈值，使用腐蚀膨胀（开操作），并提取小球的轮廓，得到目标位置。
+  \item 分别使用Kalman滤波器以及MeanShift方法对跟踪的位置、误差进行预测和跟新，并对比两者效果。
 \end{itemize}
 
-\datedsubsection{\textbf{谱聚类}}{\quad 2016.12 -- 2016.01}
+\datedsubsection{\textbf{谱聚类}}{Python\quad 2016.12 -- 2016.01}
 \begin{itemize}\small
   \item 对训练数据生成图的邻接矩阵，计算归一化普拉斯矩阵，生成最小的k个特征值和对应的特征向量，将特征向量kmeans聚类(少量的特征向量)。
 \end{itemize}
 
-\datedsubsection{\textbf{新闻检索}}{ \quad 2016.09 -- 2016.12}
+\datedsubsection{\textbf{矩阵分解}}{Python \quad 2016.09 -- 2016.12}
+\begin{itemize}\small
+  \item PLU，householder，Givens分解，Gram Schimidt正交化。
+\end{itemize}
+
+\datedsubsection{\textbf{新闻检索}}{Python/Java \quad 2016.09 -- 2016.12}
 \begin{itemize}\small
   \item 基于Scrapy抓取 web 站点并从页面中提取结构化的数据，进而采集新闻数据。
-  \item 使用 Lucene 提供的 api 构建索引库, 前端使用 jsp 接收用户查询,在后台使用 servlet 对用户查询进 行分词处理,之后到索引库中进行文档匹配, 最后把查询结果集反馈给用户并在前端页面中 展示。
+  \item 使用 Lucene 提供的 api 构建索引库, 前端使用 jsp 接收用户查询，在后台使用servlet对用户查询进行分词处理，之后到索引库中进行文档匹配，最后把查询结果集反馈给用户并在前端页面中 展示。
 \end{itemize}
 
 \datedsubsection{\textbf{自闭症辅助医疗机器人交互系统}}{ \quad 2016.03 -- 2016.06}
 \begin{itemize}\small
-  \item 针对自闭症患者设计医疗机器人交互系统，其中情绪监控单元使用AdaBoost对人脸表情进行分类。
-  \item 基于典型的特教训练任务完成交互系统以及可视化仿真。
+  \item 针对自闭症患者，使用AdaBoost对人脸表情进行分类，同时对情绪进行监控。
+  \item 针对患者设置多种特教训练任务，完成交互系统以及可视化仿真。
 \end{itemize}
 
 
@@ -77,7 +82,7 @@
 \item 熟练Linux下常用指令及C++，Python，ROS开发环境。
 \item 理解常用的视觉（惯性）SLAM/VO算法（SVO，DSO，ORB SLAM）。
 \item 熟悉常用的结构设计工具 Solidworks，AutoCAD，NX，ANSY。
-\item 熟悉常用的SLAM工具 (Sophus、Eigen、G2O)，熟练使用OpenCV。
+% \item 熟悉常用的SLAM工具 (Sophus、Eigen、G2O)，熟练使用OpenCV。
 \end{itemize}
 
 \section{\faHeartO\ 获奖情况}
