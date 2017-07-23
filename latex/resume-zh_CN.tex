@@ -36,15 +36,20 @@
 \datedsubsection{\textbf{中国科学院自动化研究所}, 北京}{\textit{在读博士} \quad 控制理论与控制工程 \quad 2013 -- 至今}
 %, 预计 2018 年 6 月毕业
 \datedsubsection{\textbf{武汉理工大学}, 武汉, 湖北}{\textit{工学学士}\qquad 电子科学与技术 \quad 2009 -- 2013}
-
+\section{\faUsers\ 实习经历}
+\small
+\datedsubsection{\textbf{地平线机器人实习生}}{程序员：SLAM \quad 2017.06 -- 至今}
+针对地下车库中（室内场景）RTK GPS无法使用的情况，离线构建高精度地图用于重定位。
+\begin{itemize}\small
+\item 使用双目相机采集车库内部及车库出入口的场景图像，利用激光雷达使用LOAM方法估计相机的位姿。通过ORB进行双目匹配建立三维特征点，通过关键帧间的特征点匹配及位姿数据计算地图点；关键帧的特征点、BOW以及地图点作为地图保存至硬盘。
+\item 重定位过程中，加载保存的地图，使用BOW对当前帧进行匹配，根据匹配得到的点使用PnP方法计算当前帧的位姿。
+\end{itemize}
 
 \section{\faUsers\ 项目经历}
-
 \datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 至今}
 \begin{itemize}\small
   \item 使用DUO 3D双目相机（具备IMU）作为室内移动机器人的视觉系统。在DSO（SLAM系统）系统的基础上加入IMU辅助，提高系统的鲁棒性，并移植到TK1（NVIDIA 嵌入式GPU）系统。
-  \item 使用深度网络实现图像的语义分割，辅助并提高视觉定位的精度。
-  \item 在室内安装二维码（AprilTag），搭建基于二维码的视觉室内定位基准系统。
+  \item 利用语义信息场景图像进行分割，增加定位结构约束，提高定位系统鲁棒性。
 \end{itemize}
 
 \datedsubsection{\textbf{无人机相对定位设计验证平台}}{程序员：软件部分 \quad 2015.11 -- 2016.10}
