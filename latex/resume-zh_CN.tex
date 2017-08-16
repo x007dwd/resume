@@ -48,8 +48,9 @@
 \section{\faUsers\ 项目经历}
 \datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 至今}
 \begin{itemize}\small
-  \item 使用DUO 3D双目相机（具备IMU）作为室内移动机器人的视觉系统。在DSO（SLAM系统）系统的基础上加入IMU辅助，提高系统的鲁棒性，并移植到TK1（NVIDIA 嵌入式GPU）系统。
-  \item 利用语义信息场景图像进行分割，增加定位结构约束，提高定位系统鲁棒性。
+  \item 基于紧耦合的视觉惯性里程计，前端中利用IMU对图像帧间预积分，利用光流法跟踪提取GFTT（Good Feature To Track）特征点，根据点匹配计算帧间的相对位姿，再利用块匹配跟踪地图点，优化当前位姿。
+  \item 在后端中构建特征点的重投影误差和IMU测量误差，利用语义信息对图像进行分割，构成空间的结构约束。基于g2o构建IMU bias、speed、Pose、Point的节点及关联的边，构成基于滑动窗口的BA。
+  %\item 使用DUO 3D双目相机（具备IMU）作为室内移动机器人的视觉系统。在DSO（SLAM系统）系统的基础上加入IMU辅助，提高系统的鲁棒性，并移植到TK1（NVIDIA 嵌入式GPU）系统。 \item 
 \end{itemize}
 
 \datedsubsection{\textbf{无人机相对定位设计验证平台}}{程序员：软件部分 \quad 2015.11 -- 2016.10}
