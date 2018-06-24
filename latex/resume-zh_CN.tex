@@ -38,7 +38,7 @@
 \datedsubsection{\textbf{武汉理工大学}, 武汉, 湖北}{\textit{工学学士}\qquad 电子科学与技术 \quad 2009 -- 2013}
 \section{\faUsers\ 实习经历}
 \small
-\datedsubsection{\textbf{地平线机器人实习生}}{程序员：SLAM \quad 2017.06 -- 至今}
+\datedsubsection{\textbf{地平线机器人实习生}}{程序员：SLAM \quad 2017.06 -- 09}
 针对地下车库中（室内场景）RTK GPS无法使用的情况，离线构建高精度地图用于重定位。
 \begin{itemize}\small
 \item 使用双目相机采集车库内部及车库出入口的场景图像，利用激光雷达使用LOAM方法估计相机的位姿。通过ORB进行双目匹配建立三维特征点，通过关键帧间的特征点匹配及位姿数据计算地图点；关键帧的特征点、BOW以及地图点作为地图保存至硬盘。
@@ -48,8 +48,8 @@
 \section{\faUsers\ 项目经历}
 \datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 至今}
 \begin{itemize}\small
-  \item 基于紧耦合的视觉惯性里程计，前端中利用IMU对图像帧间预积分，利用光流法跟踪提取GFTT（Good Feature To Track）特征点，根据点匹配计算帧间的相对位姿，再利用块匹配跟踪地图点，优化当前位姿。
-  \item 在后端中构建特征点的重投影误差和IMU测量误差，利用语义信息对图像进行分割，构成空间的结构约束。基于g2o构建IMU bias、speed、Pose、Point的节点及关联的边，构成基于滑动窗口的BA。
+  \item 基于点线特征以及结构信息的视觉惯性里程计方法，利用线特征作为点特征的补充，完成位姿的估计和跟踪。
+  \item 另外估计图像中平行线形成的消失点并提取结构信息，并构造基于结构信息的约束。融合IMU及视觉的信息，利用预积分的方法，估计帧间IMU系的相对运动，利用相机到IMU的相对变换构造IMU测量误差约束。在优化中同时还利用点线特征的重投影误差约束，完成系统的优化。
   %\item 使用DUO 3D双目相机（具备IMU）作为室内移动机器人的视觉系统。在DSO（SLAM系统）系统的基础上加入IMU辅助，提高系统的鲁棒性，并移植到TK1（NVIDIA 嵌入式GPU）系统。 \item 
 \end{itemize}
 
@@ -121,10 +121,12 @@
 %\end{itemize}
 \section{\faCogs\ 成果}
 \begin{itemize}\small
-  \item {\color{red}W. Ding}, D. Xu, X. Liu, D. Zhang, "A Robust Detection Method of Control Points for Calibration and Measurement with Defocused Images," IEEE Transactions on Instrumentation and Measurement. (SCI, EI Index, Accepted)
+  \item {\color{red}W. Ding}, D. Xu, X. Liu, D. Zhang, "A Robust Detection Method of Control Points for Calibration and Measurement with Defocused Images," IEEE Transactions on Instrumentation and Measurement, 2017 Vol. 66(10): 2725-2735. (SCI, EI Index)
+  \item {\color{red}W. Ding},, Z. Zhang, D. Zhang, D. Xu, H. Lv, X. Miao, G. Zhou, H. Liu, "An Effective On-line Surface Particles Inspection Instrument for Large Aperture Optical Element," International Journal of Automation and Computing, 	2017 Vol. 14 (4): 420-431. (EI index, Accepted).
+  \item {\color{red}丁文东}，徐德，刘希龙，张大朋，陈天，移动机器人视觉里程计综述, 自动化学报，2018, Vol. 44(3): 385-398.（EI, ESCI indexed） 
   \item {\color{red}W. Ding}, D. Xu, Z. Zhang and D. Zhang, "Particle detection on low contrast image of large aperture optics," 2016 Chinese Control and Decision Conference , Yinchuan, 2016, pp. 5209-5214.（EI index）
-  \item {\color{red}W. Ding},, Z. Zhang, D. Zhang, D. Xu, H. Lv, X. Miao, G. Zhou, H. Liu, "An Effective On-line Surface Particles Inspection Instrument for Large Aperture Optical Element," International Journal of Automation and Computing. (EI index, Accepted).
-  \item {\color{red}丁文东}，徐德，刘希龙，张大朋，移动机器人视觉定位综述, 自动化学报。（EI Index, 在审）
+  \item Chen T., {\color{red}W. Ding }, Zhang D., Liu X., "Monocular Dense Reconstruction by Fusion Depth Estimation," 2018 Chinese Control and Decision Conference , Shenyang, 2018.（EI indexed）
+      
   \item {\color{red}丁文东}，张正涛，张大鹏，陶显，史亚莉，吕海兵，苗心向，周国瑞，一种高分辨率显微视觉成像装置与控制方法，专利号: ZL 2014 1 0777930.8，申授权公告日:2017.05.31
   \item 张大朋，张正涛，{\color{red}丁文东}，徐德，光学元件表面颗粒物在线监测装置及其在线监测的方法，申请公布号: CN105928949A，申请公布日:2015.09.07
   \item 梁小宇,张纯,{\color{red}丁文东},徐帆. 基于电力载波通信的电能质量监测系统设计[J]. 武汉理工大学学报(信息与管理工程版),2013,(05):659-663.
