@@ -33,9 +33,17 @@
 %   \linkedin[丁文东]{https://www.linkedin.com/in/文东-丁-55496b134}}
   %\linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
 \section{\faGraduationCap\  教育背景}
-\datedsubsection{\textbf{中国科学院自动化研究所}, 北京}{\textit{在读博士} \quad 控制理论与控制工程 \quad 2013 -- 至今}
+\datedsubsection{\textbf{中国科学院自动化研究所}, 北京}{\textit{在读博士} \quad 控制理论与控制工程 \quad 2013.9 -- 2018.5}
 %, 预计 2018 年 6 月毕业
-\datedsubsection{\textbf{武汉理工大学}, 武汉, 湖北}{\textit{工学学士}\qquad 电子科学与技术 \quad 2009 -- 2013}
+\datedsubsection{\textbf{武汉理工大学}, 武汉, 湖北}{\textit{工学学士}\qquad 电子科学与技术 \quad 2009.9 -- 2013.5}
+\section{\faUsers\ 工作经历 BAIDU ADT} 
+\small
+\datedsubsection{\textbf{车端制图}}{\quad 2018.09 -- 至今}
+在制图流程中,包含采集车人工采集, 数据上传, 离线处理等流程, 其中在采集过程中CPU的计算资源可以进一步利用, 另外为了减少对IEout(Novatel Internet Explore)的依赖并避免数据上传, 减少制图生产的时间消耗. 因此考虑使用SLAM, 系统分为前后端，前端在采集数据的同时, 对LiDAR进行同步处理，产生Submap, 另外在后端构建Pose Graph，通过Submap完成闭环检测. 其中前端结合利用IMU数据，对LiDAR中的点云进行运动补偿，IMU预积分结果作为LiDAR位姿初值，使用点云和S	ubmap的匹配对该初值进行优化。后端结合IMU积分结果、Submap和点云及Loop Closure构建Pose Graph，并完成优化。
+
+\small
+\datedsubsection{\textbf{Model based Vehicle Tracking}}{ \quad 2018.09 -- 至今}
+在V2X中，可以利用无线通信完成车/云、车/车交互，但无法精确完成车本身的定位，在路口及停车场存在大量的监控相机，利用这些相机有助于实现视野内车辆的定位，起到辅助交通的功能。我们通过地图中的元素，提取对应的相机视野中的成像完成相机外参数的标定。在完成标定后，利用Yolo v3对图像各帧中车辆进行检测及跟踪，根据检测到的bbox，可以完成车辆的位姿初值的估计，根据CAD Model的投影及检测的边缘，我们对位姿可以进一步优化，最终实现车辆的跟踪。
 \section{\faUsers\ 实习经历}
 \small
 \datedsubsection{\textbf{地平线机器人实习生}}{程序员：SLAM \quad 2017.06 -- 09}
@@ -45,8 +53,8 @@
 \item 重定位过程中，加载保存的地图，使用BOW对当前帧进行匹配，根据匹配得到的点使用PnP方法计算当前帧的位姿。
 \end{itemize}
 
-\section{\faUsers\ 项目经历}
-\datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 至今}
+\section{\faUsers\ 学校项目经历}
+\datedsubsection{\textbf{室内移动机器人视觉惯性导航系统}}{程序员：软件部分 \quad 2016.09 -- 2018.05}
 \begin{itemize}\small
   \item 基于点线特征以及结构信息的视觉惯性里程计方法，利用线特征作为点特征的补充，完成位姿的估计和跟踪。
   \item 另外估计图像中平行线形成的消失点并提取结构信息，并构造基于结构信息的约束。融合IMU及视觉的信息，利用预积分的方法，估计帧间IMU系的相对运动，利用相机到IMU的相对变换构造IMU测量误差约束。在优化中同时还利用点线特征的重投影误差约束，完成系统的优化。
@@ -66,28 +74,28 @@
 \item 颗粒物图像中的背景复杂、信噪比低，为了分割出正确的颗粒物区域，首先提取可能的候选区域，然后通过参考图像对比筛选出正确的颗粒物区域。
 \end{itemize}
 
-\datedsubsection{\textbf{机液混合机械臂控制系统}}{毕业设计（驱动、软件） \quad 2013.03 -- 2013.06}
-\begin{itemize}\small
-  \item 基于ARM的机液混合机械臂控制系统的设计，对液压伺服系统设计控制卡（PCB），液压伺服驱动卡使用stm32作为控制核心，移植uc/os系统完成实验验证。
-  \item 研究了机械臂正逆运动学模型及路径规划并进行MATLAB仿真，针对液压系统特性提出模型参考自适应PID，用matlab进行了算法验证，并对系统进行了典型信号的测试。
-\end{itemize}
-\datedsubsection{\textbf{湖北省大学生电子设计竞赛}}{队长（单片机代码） \quad 2012.03 - 2012.08}
-\begin{itemize}\small
-  \item 使用DDS芯片完成信号源，产生幅值0-10V带宽0-100KHz的正弦信号。
-  \item 信号通过题目要求的模拟模块（频率为4.5KHz的低通滤波器），然后信号经过频率补偿电路，实现电压总增益为1，带宽扩展到100kHz，带内波动小于±10\%、输出噪声电压均方根值小于10mV。
-\end{itemize}
-\datedsubsection{\textbf{智能电网用户端电能监测系统}}{负责人（ARM及UI代码） \quad 2011.11 -- 2012.04}
-\begin{itemize}\small
-  \item 该系统为嵌入式的用户端电能质量监控系统，具有电能质量检测、能源功耗计量、电力载波通信、数据自动抄收等功能。
-  \item 电能质量检测模块可对用户的现场用电做采样处理，显示质量好坏，做指数评估。能源功耗测量模块可对用电电量、功率、功率因数等重要信息做详尽展示。电力载波通信可将数据使用电力电缆传输，集中汇总。
-  \item 下位机使用STM32作为控制核心，完成电能计量，电能质量参数分析。上位机使用QT完成显示及人机交互。
-\end{itemize}
-
-\datedsubsection{\textbf{基于等效采样的数字存储示波器}}{负责人（FPGA、单片机软件） \quad 2011.12 -- 2012.03}
-\begin{itemize}\small
-  \item 该项目使用低成本的低端低速AD实现较高频率的采集和显示，通过信号的程控放大、采样保持、AD转换、FPGA采样保持完成信号的顺序等效采样。
-  \item 使用MSP430单片机完成菜单控制和波形等显示。实时采样速率≤1MSa/s，等效采样速率≥200MSa/s，软件触发、触发电平可调。
-\end{itemize}
+%\datedsubsection{\textbf{机液混合机械臂控制系统}}{毕业设计（驱动、软件） \quad 2013.03 -- 2013.06}
+%\begin{itemize}\small
+%  \item 基于ARM的机液混合机械臂控制系统的设计，对液压伺服系统设计控制卡（PCB），液压伺服驱动卡使用stm32作为控制核心，移植uc/os系统完成实验验证。
+%  \item 研究了机械臂正逆运动学模型及路径规划并进行MATLAB仿真，针对液压系统特性提出模型参考自适应PID，用matlab进行了算法验证，并对系统进行了典型信号的测试。
+%\end{itemize}
+%\datedsubsection{\textbf{湖北省大学生电子设计竞赛}}{队长（单片机代码） \quad 2012.03 - 2012.08}
+%\begin{itemize}\small
+%  \item 使用DDS芯片完成信号源，产生幅值0-10V带宽0-100KHz的正弦信号。
+%  \item 信号通过题目要求的模拟模块（频率为4.5KHz的低通滤波器），然后信号经过频率补偿电路，实现电压总增益为1，带宽扩展到100kHz，带内波动小于±10\%、输出噪声电压均方根值小于10mV。
+%\end{itemize}
+%\datedsubsection{\textbf{智能电网用户端电能监测系统}}{负责人（ARM及UI代码） \quad 2011.11 -- 2012.04}
+%\begin{itemize}\small
+%  \item 该系统为嵌入式的用户端电能质量监控系统，具有电能质量检测、能源功耗计量、电力载波通信、数据自动抄收等功能。
+%  \item 电能质量检测模块可对用户的现场用电做采样处理，显示质量好坏，做指数评估。能源功耗测量模块可对用电电量、功率、功率因数等重要信息做详尽展示。电力载波通信可将数据使用电力电缆传输，集中汇总。
+%  \item 下位机使用STM32作为控制核心，完成电能计量，电能质量参数分析。上位机使用QT完成显示及人机交互。
+%\end{itemize}
+%
+%\datedsubsection{\textbf{基于等效采样的数字存储示波器}}{负责人（FPGA、单片机软件） \quad 2011.12 -- 2012.03}
+%\begin{itemize}\small
+%  \item 该项目使用低成本的低端低速AD实现较高频率的采集和显示，通过信号的程控放大、采样保持、AD转换、FPGA采样保持完成信号的顺序等效采样。
+%  \item 使用MSP430单片机完成菜单控制和波形等显示。实时采样速率≤1MSa/s，等效采样速率≥200MSa/s，软件触发、触发电平可调。
+%\end{itemize}
 
 
 
